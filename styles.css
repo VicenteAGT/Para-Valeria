@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(220, 117, 208);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+}
+
+#flower-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#lyrics-container {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 36px; /* Tamaño más grande para pantallas grandes */
+    font-weight: bold;
+    z-index: 10;
+    width: 90%; /* Ancho del contenedor para evitar desbordamiento */
+    max-width: 800px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centrar el contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: black 5px;
+}
+
+.lyric {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    letter-spacing: 2px;
+    text-align: center; /* Asegurar que el texto esté centrado */
+    width: 100%; /* Ocupar todo el ancho disponible */
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    #lyrics-container {
+        font-size: 28px; /* Tamaño más grande para móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    #lyrics-container {
+        font-size: 24px; /* Tamaño aún más grande para pantallas muy pequeñas */
+    }
+
+    .lyric {
+        white-space: normal; /* Permitir saltos de línea en pantallas pequeñas */
+        padding: 0 10px; /* Añadir un poco de padding para evitar que el texto toque los bordes */
+    }
+}
+#maestra{
+    color: rgb(242, 221, 32);
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+
+}
